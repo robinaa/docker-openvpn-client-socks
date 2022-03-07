@@ -6,7 +6,7 @@ routing).
 
 This supports directory style (where the certificates are not bundled together in one `.ovpn` file) and those that contains `update-resolv-conf`
 
-(For the same thing in WireGuard, see [kizzx2/docker-wireguard-socks-proxy](https://github.com/kizzx2/docker-wireguard-socks-proxy))
+(For the same thing in WireGuard, see [robinaa/docker-wireguard-socks-proxy](https://github.com/robinaa/docker-wireguard-socks-proxy))
 
 ## Why?
 
@@ -27,7 +27,7 @@ Alternatively, using `docker run` directly:
 docker run -it --rm --device=/dev/net/tun --cap-add=NET_ADMIN \
     --name openvpn-client \
     --volume /your/openvpn/directory/:/etc/openvpn/:ro -p 1080:1080 \
-    kizzx2/openvpn-client-socks
+    robinaa/openvpn-client-socks
 ```
 
 Then connect to SOCKS proxy through through `localhost:1080` / `local.docker:1080`. For example:
